@@ -4,6 +4,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import data from './data.json';
+
 class App extends React.Component {
   // state: lets us store information within a component that's going to change
   constructor(props) {
@@ -16,6 +18,8 @@ class App extends React.Component {
       // other things allowed too!
       showModal: false
     };
+
+    console.log(data.map(beast => beast.title));
   }
 
   buttonClicked = () => {
